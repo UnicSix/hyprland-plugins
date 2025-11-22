@@ -305,11 +305,12 @@ void COverview::selectHoveredWorkspace() {
     int y     = lastMousePosLocal.y / pMonitor->m_size.y * SIDE_LENGTH;
     closeOnID = x + y * SIDE_LENGTH;
 }
+
 void COverview::selectWorkspaceIndex(int index) {
     if (closing) {
         return;
     }
-    closeOnID = index / SIDE_LENGTH + index % SIDE_LENGTH;
+    closeOnID = index/*  / SIDE_LENGTH + index % SIDE_LENGTH */;
 }
 
 void COverview::redrawID(int id, bool forcelowres) {
